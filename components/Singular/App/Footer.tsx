@@ -6,9 +6,9 @@ export default function Footer() {
     return (
         <>
             <div className={classes['button-container']}>
-                <span className={classes.subtitle}>Looking for a professional solution?</span>
+                <span className={classes.subtitle}>Looking for an engineer who ships?</span>
                 <a href='https://www.linkedin.com/in/oleksiireznichenko' target='_blank' className={classes['big-link']}>
-                    <strong>Let’s start a project</strong>
+                    <strong>Get in touch</strong>
                     <img src="/static/svg/arrowAngle.svg" alt="" className={classes.arrow} />
                 </a>
             </div>
@@ -33,7 +33,7 @@ export default function Footer() {
                                     <span className={classes.subtitle}>My expertise</span>
                                 </li>
                                 <li className={classes.item}>
-                                    <a href='https://drive.google.com/file/d/1X3XHCpJ2lOlGTHEvFdZYJM1leNuKa6Ic/view?usp=sharing' target='_blank' className={classes.link}>CV | Resume</a>
+                                    <a href='mailto:oleksiireznichenko228@gmail.com' className={classes.link}>Email</a>
                                 </li>
                                 <li className={classes.item}>
                                     <a href='https://github.com/AlexeyReznichenko' target='_blank' className={classes.link}>GitHub</a>
@@ -41,21 +41,21 @@ export default function Footer() {
                             </ul>
                             <ul className={`${classes.list} desktop`}>
                                 <li className={classes.item}>
-                                    <span className={classes.subtitle}>© 2023 P2H Inc, All rights reserved.</span>
+                                    <span className={classes.subtitle}>© {new Date().getFullYear()} Oleksii Reznichenko.</span>
                                 </li>
-                                <li className={classes.item}>
+                                {/* <li className={classes.item}>
                                     <Link href='/tos' className={classes.link}>Terms of Service</Link>
-                                </li>
+                                </li> */}
                             </ul>
                         </nav>
                     </div>
                     <ul className={`${classes.list} mobile`}>
                         <li className={classes.item}>
-                            <span className={classes.subtitle}>© 2023 P2H Inc, All rights reserved.</span>
+                            <span className={classes.subtitle}>© {new Date().getFullYear()} Oleksii Reznichenko.</span>
                         </li>
-                        <li className={classes.item}>
+                        {/* <li className={classes.item}>
                             <Link href='/tos' className={classes.link}>Terms of Service</Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </footer>

@@ -39,13 +39,13 @@ export default function Navigation({ scrollToSection }: Props) {
                 </button>
                 <div className={`${classes.dropdown} ${classes['dropdown-1']} ${(isActiveDropdown1 ? '' : ' closed')}`}>
                     <ul
-                        onClick={() => handleCloseDropdown(setIsActiveDropdown4)}
+                        onClick={() => handleCloseDropdown(setIsActiveDropdown1)}
                         className={classes.list}>
                         <li className={classes.item}>
                             <button onClick={() => scrollToSection('portfolio')} className={classes.link}>Portfolio</button>
                         </li>
                         <li className={classes.item}>
-                            <button onClick={() => scrollToSection('about')} className={classes.link}>About me</button>
+                            <button onClick={() => scrollToSection('about')} className={classes.link}>Skills</button>
                         </li>
                         <li className={classes.item}>
                             <Link href='/faq' className={classes.link}>FAQ</Link>
@@ -73,6 +73,14 @@ export default function Navigation({ scrollToSection }: Props) {
                      className={classes.list}>
                         <li className={classes.item}>
                             <a 
+                            href='https://www.linkedin.com/in/oleksiireznichenko' 
+                            target='_blank' 
+                            className={classes.link}>
+                                LinkedIn
+                            </a>
+                        </li>
+                        <li className={classes.item}>
+                            <a 
                              href='https://t.me/aleksys228' 
                              target='_blank' 
                              className={classes.link}>
@@ -81,10 +89,10 @@ export default function Navigation({ scrollToSection }: Props) {
                         </li>
                         <li className={classes.item}>
                             <a 
-                             href='https://drive.google.com/file/d/1X3XHCpJ2lOlGTHEvFdZYJM1leNuKa6Ic/view?usp=sharing' 
-                             target='_blank' 
+                             href='mailto:oleksiireznichenko228@gmail.com' 
+                            //  target='_blank' 
                              className={classes.link}>
-                                CV | Resume
+                                Email
                             </a>
                         </li>
                         <li className={classes.item}>

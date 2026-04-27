@@ -5,10 +5,10 @@ interface Props {
     answer?: string;
     answerList?: string[];
     answerListSkills?: string[];
-    answerListYears?: string[];
+    answerListSkillsType?: string[];
 }
 
-export default function Question({ question, answer, answerListSkills, answerListYears }: Props) {
+export default function Question({ question, answer, answerListSkills, answerListSkillsType }: Props) {
 
     return (
         <div className={`${classes.question} question`}>
@@ -18,20 +18,24 @@ export default function Question({ question, answer, answerListSkills, answerLis
             </div>
             <div className={`${classes['toggle-container']} toggle-container`}>
                 {answer && <p className={classes.answer}>{answer}</p>}
-                {answerListSkills && answerListYears && <div className={`${classes.answer} ${classes['flex-container']}`}>
-                    <ul className={`${classes.list} ${classes.skills}`}>
-                        {answerListSkills.map((el, index) => {
-                            return (
-                                <li 
-                                 key={index + 'skills'}
-                                 className={classes.item}>
-                                    {el}
-                                </li>
-                            )
+                {answerListSkills && answerListSkillsType && <div className={`${classes.answer} ${classes['flex-container']}`}>
+                    {answerListSkillsType && <ul className={`${classes.list} ${classes.skills}`}>
+                        {answerListSkillsType.map((type, index) => {
+                            return answerListSkills.map((skills, index2) => {
+                                if (index2 !== index) return;
+                                return (
+                                    <li 
+                                     key={index + 'skills'}
+                                     className={classes.item}>
+                                        ✅ <span className={classes.type}>{type}{skills ? ':' : ''} </span> 
+                                        {skills} 
+                                    </li>
+                                )
+                            })
                         })}
-                    </ul>
-                    <ul className={`${classes.list}`}>
-                        {answerListYears.map((el, index) => {
+                    </ul>}
+                    {/* {answerListSkills && <ul className={`${classes.list}`}>
+                        {answerListSkills.map((el, index) => {
                             return (
                                 <li 
                                  key={index + 'years'}
@@ -40,7 +44,7 @@ export default function Question({ question, answer, answerListSkills, answerLis
                                 </li>
                             )
                         })}
-                    </ul>
+                    </ul>} */}
                 </div>}
             </div>
         </div>

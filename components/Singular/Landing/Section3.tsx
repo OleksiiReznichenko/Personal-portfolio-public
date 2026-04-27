@@ -7,9 +7,11 @@ export default function Section3() {
             <div className={classes['inner-container']}>
                 <div className={classes.watch}>
                     <div className={classes.inner}>
-                        <img src="/static/img/Landing/watch.png" alt="" />
-                        <img src="/static/svg/Landing/watchArrow.svg" alt="" className={`${classes.arrow} ${classes['arrow-minutes']}`} />
-                        <img src="/static/svg/Landing/watchArrow.svg" alt="" className={`${classes.arrow} ${classes['arrow-hours']}`} />
+                        <div className={classes['inner-2']}>
+                            <img src="/static/img/Landing/watch.png" alt="" />
+                            <img src="/static/svg/Landing/watchArrow.svg" alt="" className={`${classes.arrow} ${classes['arrow-minutes']}`} />
+                            <img src="/static/svg/Landing/watchArrow.svg" alt="" className={`${classes.arrow} ${classes['arrow-hours']}`} />
+                        </div>
                     </div>
                 </div>
                 <div className={classes.info}>
@@ -17,11 +19,12 @@ export default function Section3() {
                         Delivering Results
                     </strong>
                     <p className={classes.description}>
-                        From freelancing to my current role, I've brought designs to life and delivered 
-                        over 10 diverse projects. My work isn't just about coding; it's about making 
-                        websites that meet unique business needs. Whether it's a simple landing page or 
-                        a complex online shop, I focus on results. Using tools like Git, I ensure smooth 
-                        collaboration, and the end result goes beyond expectations, ensuring a positive user experience.
+                        15+ shipped projects across SaaS dashboards, e-commerce, and marketing sites — owning 
+                        the frontend in TypeScript, React, and Next.js. The work behind the visuals: measurable 
+                        performance gains (40% faster page loads via code-splitting and caching), accessibility 
+                        compliance (WCAG, semantic HTML, ARIA), and reliable delivery through testing and CI/CD 
+                        pipelines. Now expanding the same engineering mindset into backend, databases, and cloud 
+                        through BSc IT studies at OsloMet.
                     </p>
                 </div>
             </div>

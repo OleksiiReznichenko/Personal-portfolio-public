@@ -11,68 +11,71 @@ interface Question {
     answer?: string;
     answerList?: string[];
     answerListSkills?: string[];
-    answerListYears?: string[];
+    answerListSkillsType?: string[];
 }
 
 const QUESTIONS: Question[] = [
     {
         id: 1,
-        question: `What is your experience as a Frontend Web Developer?`,
-        answer: `I have 3 years of experience as a Frontend Web Developer. During this time, I've focused 
-        on making websites faster and more user-friendly, specializing in adding animations and 3D features.`
+        question: `What is your background as an engineer?`,
+        answer: `3+ years of professional frontend experience (Apr 2021 – Feb 2024) building 
+        production applications in React, Next.js, TypeScript, with 15+ shipped projects across 
+        SaaS dashboards, e-commerce, and marketing sites. Currently studying BSc IT at OsloMet 
+        (Aug 2025 – Jun 2028) and expanding into backend, databases, and cloud development.`
     },
     {
         id: 2,
-        question: `What are your primary skills and the duration of your experience in each?`,
-        answerListSkills: [
-            'HTML:',
-            'CSS:',
-            'Sass:',
-            'JavaScript:',
-            'Vue.js:',
-            'Nuxt.js:',
-            'Git:',
-            'TypeScript:',
-            'React:',
-            'Next.js:',
+        question: `What is your current technical stack?`,
+        answerListSkillsType: [
+            'Languages',
+            'Frontend',
+            'Backend / data (in progress)',
+            'Tooling',
+            'Testing',
+            'Engineering practices',
         ],
-        answerListYears: [
-            '3 years',
-            '3 years',
-            '3 years',
-            '3 years',
-            '2 years',
-            '2 years',
-            '2 years',
-            '1 year',
-            '1 year',
-            '1 year',
+        answerListSkills: [
+            'TypeScript, JavaScript (ES6+), Java, Python, SQL',
+            'React, Next.js, HTML5, CSS, Sass/SCSS, Tailwind CSS',
+            'Node.js, REST APIs, GraphQL, PostgreSQL, Java APIs',
+            'Git, Vite, Docker, CI/CD pipelines (GitHub Actions, Vercel)',
+            'Playwright, Vitest',
+            'Performance optimization, accessibility (WCAG), responsive design',
+            ''
         ],
     },
     {
         id: 3,
-        question: `What is your current position and role?`,
-        answer: `I am currently a Frontend Web Developer at Heavens.pro, where I have been working since 
-        April 2021. I've successfully delivered over 10 projects, ranging from basic landing pages to complex 
-        online shops.`
+        question: `What are you doing now?`,
+        answer: `Studying BSc IT at OsloMet in Oslo (Aug 2025 – Jun 2028), with current coursework 
+        in Java APIs, Python, Databases, and Web Programming. Strong grades in foundational programming 
+        (A in Programming, A in Web Development & Inclusive Design). Working part-time at ASKO alongside 
+        studies and building independent projects to deepen backend and cloud skills.`
     },
     {
         id: 4,
-        question: `What tools and technologies do you use in your current role?`,
-        answer: `In my current role, I use Vue.js, React, and Next.js as core tools, combined with HTML, SCSS, 
-        and TypeScript for effective development. Git is used for version control.`
+        question: `What kind of role are you looking for?`,
+        answer: `Open to summer 2026 internships, part-time student developer roles in Oslo (or remote), 
+        and summer 2027 internships at Norwegian tech companies. Targeting full-stack and backend-leaning 
+        positions while staying open to strong frontend opportunities. Norwegian and English working 
+        proficiency, plus native Russian and Ukrainian.`
     },
     {
         id: 5,
-        question: `How do you ensure that your websites not only look impressive but also perform well?`,
-        answer: `I emphasize performance optimization and enhancing the overall user experience. This ensures 
-        that the websites operate smoothly, providing users with a positive and seamless interaction.`
+        question: `How do you approach performance and accessibility?`,
+        answer: `Performance and accessibility are part of how I build, not afterthoughts. Across my client 
+        work, I drove measurable results: reduced page load times by up to 40% via code-splitting, image 
+        optimization, and caching strategies. I work to WCAG accessibility standards using semantic HTML, 
+        keyboard/ARIA support, and structured headings. Testing with Playwright and Vitest catches regressions 
+        before they ship.`
     },
     {
         id: 6,
-        question: `Do you stay updated on the latest trends in web development?`,
-        answer: `I am always learning and staying updated on the latest trends in web development to ensure 
-        that I bring the most current and effective solutions to my projects.`
+        question: `What are you currently building or learning?`,
+        answer: `Studying for upcoming exams in Python, Web Programming, and Databases (June 2026). Building a 
+        flagship full-stack project this summer combining ASP.NET Core (C#), PostgreSQL, and Azure deployment 
+        with a Next.js frontend — extending my engineering range from frontend into backend and cloud. Long-term 
+        focus areas: .NET ecosystem, cloud-native development, and algorithmic depth.`
     },
 ];
 
@@ -129,7 +132,7 @@ export default function Faq() {
                                 answer={el.answer}
                                 answerList={el.answerList}
                                 answerListSkills={el.answerListSkills}
-                                answerListYears={el.answerListYears}
+                                answerListSkillsType={el.answerListSkillsType}
                             />
                         )
                     })}

@@ -69,6 +69,12 @@
         border: 1px solid var(--color-orange);
         border-radius: 5px;
         padding: .45rem;
+        min-width: 10rem;
+        text-align: center;
+
+        @media only screen and (max-width: 850px) {
+            min-width: 100px;
+        }
 
         .inner {
             background-color: var(--color-orange-2);
@@ -77,6 +83,7 @@
             padding: .8rem 1.6rem 1.1rem;
             line-height: .8;
             transition: all .3s;
+            width: 100%;
 
             @media only screen and (max-width: 850px) {
                 font-size: 20px;

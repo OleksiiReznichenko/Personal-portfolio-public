@@ -21,8 +21,31 @@ import Section1 from '@/components/Singular/Landing/Section1';
 import Section2 from '@/components/Singular/Landing/Section2';
 import Section3 from '@/components/Singular/Landing/Section3';
 import Section4 from '@/components/Singular/Landing/Section4';
+import { Metadata } from 'next';
 
 gsap.registerPlugin(ScrollTrigger);
+
+// export const metadata: Metadata = {
+//     title: 'Oleksii Reznichenko | Web Developer',
+//     description: `Explore the portfolio of Oleksii Reznichenko, a passionate front-end web developer 
+//     with 3 years of experience. Specializing in React, Vue.js, Next.js, HTML, CSS, Sass, JavaScript and TypeScript, 
+//     I craft high-performance websites with a focus on user-friendliness and 
+//     contribute to the development of dynamic and responsive web applications.`,
+//     openGraph: {
+//         title: 'Oleksii Reznichenko | Web Developer',
+//         description: `Explore the portfolio of Oleksii Reznichenko, a passionate front-end web developer 
+//         with 3 years of experience. Specializing in React, Vue.js, Next.js, HTML, CSS, Sass, JavaScript and TypeScript, 
+//         I craft high-performance websites with a focus on user-friendliness and 
+//         contribute to the development of dynamic and responsive web applications.`
+//     },
+//     twitter: {
+//         title: 'Oleksii Reznichenko | Web Developer',
+//         description: `Explore the portfolio of Oleksii Reznichenko, a passionate front-end web developer 
+//         with 3 years of experience. Specializing in React, Vue.js, Next.js, HTML, CSS, Sass, JavaScript and TypeScript, 
+//         I craft high-performance websites with a focus on user-friendliness and 
+//         contribute to the development of dynamic and responsive web applications.`
+//     },
+// };
 
 let initialWindowWidth = 0;
 
@@ -152,10 +175,10 @@ export default function Home() {
                 .to(`.${classesSection2['section-2']}`, {duration: 1.2, delay: .35, y: -110 * VH, ease: Power0.easeIn}, 'section-3-animation')
                 .from(`.${classesSection2['line-2']} .${classesSection2.inner}`, {duration: 1.2, delay: .15, width: 0, ease: Power0.easeIn}, 'section-3-animation')
                 .from(`.${classesSection3.content}`, {duration: 1.2, delay: .35, y: 50 * VH, ease: Power0.easeIn}, 'section-3-animation')
-                .from(`.${classesSection3.watch}`, {duration: 1.2, delay: .35, y: 50 * VH, ease: Power0.easeIn}, 'section-3-animation')
+                .from(`.${classesSection3.watch} .${classesSection3.inner}`, {duration: 1.2, delay: .35, y: 50 * VH, ease: Power0.easeIn}, 'section-3-animation')
 
                 .add('section-3-animation-2')
-                .fromTo(`.${classesSection3.watch} .${classesSection3.inner}`, 
+                .fromTo(`.${classesSection3.watch} .${classesSection3['inner-2']}`, 
                     {duration: .9, scale: .7},
                     {duration: .9, scale: 1.1},
                 'section-3-animation-2')
@@ -174,8 +197,8 @@ export default function Home() {
                 .from(`.${classesSection3['green-stick-3']}`, {duration: .9, x: 50 * BASE_FONT_SIZE, y: 50 * BASE_FONT_SIZE, rotate: 43, ease: Power0.easeIn}, 'section-3-animation-2')
 
                 .add('section-3-animation-3')
-                .to(`.${classesSection3.watch} .${classesSection3.inner}`, {duration: .8, scale: 1, ease: Power0.easeIn}, 'section-3-animation-3')
-                .to(`.${classesSection3.watch}`, {duration: .8, top: '25%', ease: Power0.easeIn}, 'section-3-animation-3')
+                .to(`.${classesSection3.watch} .${classesSection3['inner-2']}`, {duration: .8, scale: 1, ease: Power0.easeIn}, 'section-3-animation-3')
+                .to(`.${classesSection3.watch} .${classesSection3.inner}`, {duration: .8, top: -25 * VH, ease: Power0.easeIn}, 'section-3-animation-3')
                 .from(`.${classesSection3.info}`, {duration: .8, y: 100 * VH, ease: Power0.easeIn}, 'section-3-animation-3')
                 .to(`.${classesSection3['orange-stick-1']}`, {duration: .8, x: -20 * BASE_FONT_SIZE, y: -100 * BASE_FONT_SIZE, rotate: 15, ease: Power0.easeIn}, 'section-3-animation-3')
                 .to(`.${classesSection3['green-stick-1']}`, {duration: .8, x: -10 * BASE_FONT_SIZE, y: -90 * VH, rotate: 56, ease: Power0.easeIn}, 'section-3-animation-3')
@@ -198,7 +221,7 @@ export default function Home() {
                 .to(`.${classesProject['project-to-top']}`, {duration: 1, stagger: 1.2, delay: .25, y: -110 * VH, ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesProject['project-to-top']} .${classesProject.cover}`, {duration: 1, stagger: 1.2, delay: .25, height: 26 * BASE_FONT_SIZE, ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesProject['project-to-top']} .${classesProject.info}`, {duration: 1, stagger: 1.2, delay: .25, y: -30 * BASE_FONT_SIZE, ease: Power0.easeIn}, 'section-4-animation')
-                .to(`.${classesSection4['title-to-top']}`, {duration: 1, stagger: 1.2, delay: .25, y: 20 * BASE_FONT_SIZE, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
+                .to(`.${classesSection4['title-to-top']}`, {duration: 1, stagger: 1.2, delay: .25, autoAlpha: 0, y: 20 * BASE_FONT_SIZE, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesSection4['index-to-top']}`, {duration: 1, stagger: 1.2, delay: .25, autoAlpha: 0, ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesButtonProject['button-project-to-top']}`, {duration: 1, stagger: 1.2, delay: .25, height: 5, backgroundColor: '#2D2D2D', width: '80%', ease: Power0.easeIn}, 'section-4-animation')
                 .from(`.${classesProject['project-from-bottom']}`, {duration: 1, stagger: 1.2, delay: .2, y: 110 * VH, ease: Power0.easeIn}, 'section-4-animation')
@@ -208,7 +231,7 @@ export default function Home() {
                     {duration: .8, delay: .4, stagger: 1.2, filter: 'brightness(20%) blur(5px) grayscale(1)'},
                     {duration: .8, delay: .4, stagger: 1.2, filter: 'brightness(100%) blur(0px) grayscale(0)'},
                 'section-4-animation')
-                .from(`.${classesSection4['title-from-bottom']}`, {duration: 1, stagger: 1.2, delay: .2, y: -20 * BASE_FONT_SIZE, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
+                .from(`.${classesSection4['title-from-bottom']}`, {duration: 1, stagger: 1.2, delay: .2, autoAlpha: 0, y: -20 * BASE_FONT_SIZE, textShadow: '0px 0px 0px rgba(0, 0, 0, 0)', ease: Power0.easeIn}, 'section-4-animation')
                 .from(`.${classesSection4['index-from-bottom']}`, {duration: 1, stagger: 1.2, delay: .2, autoAlpha: 0, ease: Power0.easeIn}, 'section-4-animation')
                 .to(`.${classesButtonProject['button-project']}`, {duration: 1, stagger: 1.2, delay: .2, height: 6, backgroundColor: '#D9D9D9', width: '100%', ease: Power0.easeIn}, 'section-4-animation-=1.2')
 
@@ -252,10 +275,10 @@ export default function Home() {
                 .to(`.${classesSection2['section-2']}`, {duration: 1.2, delay: .15, y: -120 * VH, ease: 'linear'}, 'section-3-animation')
                 .from(`.${classesSection2['line-2']} .${classesSection2.inner}`, {duration: 1.2, delay: .15, width: 0, ease: 'linear'}, 'section-3-animation')
                 .from(`.${classesSection3.content}`, {duration: 1.2, delay: .15, y: 50 * VH, ease: 'linear'}, 'section-3-animation')
-                .from(`.${classesSection3.watch}`, {duration: 1.2, delay: .125, y: 50 * VH, ease: 'linear'}, 'section-3-animation')
+                .from(`.${classesSection3.watch} .${classesSection3.inner}`, {duration: 1.2, delay: .125, y: 50 * VH, ease: 'linear'}, 'section-3-animation')
 
                 .add('section-3-animation-2')
-                .fromTo(`.${classesSection3.watch} .${classesSection3.inner}`, 
+                .fromTo(`.${classesSection3.watch} .${classesSection3['inner-2']}`, 
                     {duration: .9, scale: .9},
                     {duration: .9, scale: 1.1},
                 'section-3-animation-2')
@@ -269,8 +292,8 @@ export default function Home() {
                 'section-3-animation-2')
 
                 .add('section-3-animation-3')
-                .to(`.${classesSection3.watch} .${classesSection3.inner}`, {duration: .8, scale: .9, ease: 'linear'}, 'section-3-animation-3')
-                .to(`.${classesSection3.watch}`, {duration: .8, top: '28%', ease: 'linear'}, 'section-3-animation-3')
+                .to(`.${classesSection3.watch} .${classesSection3['inner-2']}`, {duration: .8, scale: .9, ease: 'linear'}, 'section-3-animation-3')
+                .to(`.${classesSection3.watch} .${classesSection3.inner}`, {duration: .8, top: -22 * VH, ease: 'linear'}, 'section-3-animation-3')
                 .from(`.${classesSection3.info}`, {duration: .8, y: 100 * VH, ease: 'linear'}, 'section-3-animation-3')
                 .from(`.${classesSection3['orange-stick-1']}`, {duration: .8, x: 50 * BASE_FONT_SIZE, y: 40 * BASE_FONT_SIZE, rotate: 60, ease: 'linear'}, 'section-3-animation-3')
                 .from(`.${classesSection3['orange-stick-2']}`, {duration: .8, x: -30 * BASE_FONT_SIZE, y: -40 * BASE_FONT_SIZE, rotate: 50, ease: 'linear'}, 'section-3-animation-3')

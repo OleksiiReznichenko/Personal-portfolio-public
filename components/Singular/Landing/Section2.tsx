@@ -12,18 +12,21 @@ export default function Section2() {
                     <span className={classes.word}>My portfolio</span>
                     <div className={classes['info-blocks']}>
                         <div className={`${classes['info-block']} ${classes['info-block-1']}`}>
-                            <strong className={classes.subtitle}>Frontend Technologies</strong>
+                            <strong className={classes.subtitle}>Frontend Engineering</strong>
                             <p className={classes.description}>
-                                Skilled in HTML, CSS, Sass, JavaScript and TypeScript with a solid foundation. 
-                                Experienced in frameworks like Vue.js, React, Nuxt.js and Next.js, contributing 
-                                to the development of dynamic and responsive web applications.
+                                Production frontend in TypeScript, React, and Next.js — built across 15+ shipped 
+                                projects with focus on performance, accessibility, and reliable delivery. 
+                                Comfortable across the full Next.js ecosystem (App Router, SSR/ISR), 
+                                API integrations (REST/GraphQL), and modern testing (Playwright, Vitest).
                             </p>
                         </div>
                         <div className={`${classes['info-block']} ${classes['info-block-2']}`}>
-                            <strong className={classes.subtitle}>Git and Teamwork</strong>
+                            <strong className={classes.subtitle}>Full-stack & cloud</strong>
                             <p className={classes.description}>
-                                Extensive experience with Git, using it to collaborate effectively and manage code.
-                                I ensure smooth teamwork, contributing to the success of each project.
+                                Currently expanding from frontend into backend and cloud through BSc IT studies 
+                                at OsloMet. Working with Java, Python, SQL, and database design in coursework — 
+                                building toward a full-stack profile with C#/.NET, PostgreSQL, and Azure 
+                                as next focus areas.
                             </p>
                         </div>
                     </div>

@@ -20,26 +20,43 @@ export default function Section1() {
                 <div className={classes.content}>
                     <div className={classes.stands}>
                         <div className={classes.inner}>
-                            {isMounted && <Image quality={95} src={!isMobile ? '/static/img/Landing/Section1/stand.png' : '/static/img/Landing/Section1/standInitial.png'} alt="" fill />}
+                            {isMounted && 
+                            <Image 
+                             quality={95} 
+                             src={!isMobile ? 
+                              '/static/img/Landing/Section1/stand.png' : 
+                              '/static/img/Landing/Section1/standInitial.png'} 
+                             alt="" fill />
+                            }
                         </div>
                     </div>
                     <div className={classes.dollar}>
-                        {isMounted && !isMobile && <Image quality={90} src="/static/img/Landing/Section1/dollar.png" alt="" fill />}
+                        {isMounted && !isMobile && 
+                        <Image 
+                         quality={90} 
+                         src="/static/img/Landing/Section1/dollar.png" 
+                         alt="" fill />
+                        }
                     </div>
                     <div className={classes.info}>
                         <h1 className={classes.title}>
                             <span className={classes.white}>Oleksii </span> 
                             <span className={classes.yellow}> Reznichenko </span> 
-                            <span className={classes.white}> W<span className={classes.font}>eb</span> </span> 
-                            <span className={classes.white}> deve- </span> 
-                            <span className={classes.white}> lo<span className={classes.font}>per</span> </span> 
+                            {/* <span className={classes.white}> W<span className={classes.font}>eb</span> </span>  */}
+                            <span className={classes.white}> Soft- </span> 
+                            <span className={classes.white}> ware </span> 
+                            <span className={classes.white}> engineer </span> 
+                            {/* <span className={classes.white}> lo<span className={classes.font}>per</span> </span>  */}
+                            {/* <span className={classes.white}> neer </span>  */}
                         </h1>
                         <p className={`${classes.description} mobile`}>
-                            Passionate front-end developer with 3 years of experience, dedicated to crafting websites that prioritize speed and user-friendliness.
+                            Passionate front-end developer with 3 years of experience, dedicated to crafting 
+                            websites that prioritize speed and user-friendliness.
                         </p>
                     </div>
                     <p className={`${classes.description} desktop`}>
-                        Passionate front-end developer with 3 years of experience, dedicated to crafting websites that prioritize speed and user-friendliness.
+                        Software engineer with 3+ years of frontend experience (React, Next.js, TypeScript). 
+                        Currently studying BSc IT at OsloMet — expanding into backend, cloud, and full-stack systems.
                     </p>
                 </div>
             </div>

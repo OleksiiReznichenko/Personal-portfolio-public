@@ -43,6 +43,14 @@ export default function NavigationMenu({ scrollToSection }: Props) {
                     </li>
                     <li className={classes.item}>
                         <a 
+                        href='https://www.linkedin.com/in/oleksiireznichenko' 
+                        target='_blank' 
+                        className={classes.link}>
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li className={classes.item}>
+                        <a 
                             href='https://t.me/aleksys228' 
                             target='_blank' 
                             className={classes.link}>
@@ -51,7 +59,7 @@ export default function NavigationMenu({ scrollToSection }: Props) {
                     </li>
                     <li className={classes.item}>
                         <a 
-                         href='https://drive.google.com/file/d/1X3XHCpJ2lOlGTHEvFdZYJM1leNuKa6Ic/view?usp=sharing' 
+                         href='https://drive.google.com/file/d/1OJDs93w96dsI8X93t2Eioiqw5zZTR-uL/view?usp=sharing' 
                          target='_blank' 
                          className={classes.link}>
                             CV | Resume
