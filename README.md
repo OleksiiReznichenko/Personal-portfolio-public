@@ -1,33 +1,58 @@
-# My Portfolio website
 
-## Description
-Portfolio website of Oleksii Reznichenko, a passionate front-end web developer.
+# Personal Portfolio
 
-## Pages of the website
-#### Main
-#### Faq
-#### Terms of service
-#### Custom error page
+The source code for my personal developer portfolio.
 
-## Used technologies
-#### Next       - React framework
-#### TypeScript - programming language that adds static typing with optional type annotations to JavaScript
-#### Scss       - preprocessor for css
-#### Redux      - library for managing application state
-#### Gsap       - library for work with advanced animations
+**Live website:** https://oleksiireznichenko.com
 
-## Application responsiveness
-This website is designed for full adaptability across the most devices and orientations. It adjusts to phone vertical, tablet vertical and horizontal orientations, device orientation changes, laptops of different sizes, 4k monitors, IOS, Windows, and Android. This responsiveness is achieved through the use of the "rem" approach for styling, with "rem" as the primary unit (rather than pixels), and the use of a lot of media queries. The transition from the desktop design version to the mobile design version occurs at a breakpoint of 850px width.
+I built this website to showcase my previous client projects, development experience and technical skills. It also gave me a chance to experiment with animations, page transitions and responsive layouts.
 
-## Application TypeScript code
-TypeScript code is structurized and have comments. 
+## Tech stack
 
-## Application assests: images, svgs and fonts
-Images are located in public/static/img. All images have been compressed through https://tinypng.com compressor. All images that are over 50 kb are loaded through next/Image tag.
+- Next.js 14 and React
+- TypeScript
+- SCSS
+- GSAP and ScrollTrigger
+- Redux Toolkit
 
-Svgs are located in public/static/svg.
+## Features
 
-Fonts are located in public/static/fonts. All fonts have been converted to .woff format, because it has smaller file size.
+- Interactive landing page with scroll-based animations
+- Project gallery with details about previous work
+- Responsive desktop and mobile layouts
+- FAQ page
+- Contact links and social profiles
 
+## Running locally
 
+You'll need Node.js and npm installed.
 
+```bash
+git clone https://github.com/OleksiiReznichenko/Personal-portfolio-public.git
+cd Personal-portfolio-public
+npm install
+npm run dev
+```
+
+Open http://localhost:3000 in your browser.
+
+To create a production build:
+
+```bash
+npm run build
+npm run start
+```
+
+## Project structure
+
+- `app/` - Pages, layouts and routing
+- `components/` - React components
+- `styles/` - SCSS stylesheets
+- `store/` - Redux state management
+- `public/` - Images, fonts and other assets
+- `types/` - TypeScript types
+- `utils/` - Shared utility functions
+
+## Notes
+
+Some of the projects featured on the website are older client projects. Their original production services may no longer be available, so certain links lead to frontend demos or archived versions instead.
