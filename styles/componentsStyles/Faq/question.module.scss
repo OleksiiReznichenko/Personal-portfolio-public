@@ -64,18 +64,22 @@
         }
 
         .list {
+            margin-bottom: .75rem;
 
             &:not(:last-of-type) {
                 margin-right: 1rem;
             }
 
             &.skills {
-                font-weight: 900;
-                text-transform: uppercase;
+                // font-weight: 900;
+                // text-transform: uppercase;
+                word-spacing: .1rem;
                 
                 .type {
-                    font-weight: 500;
-                    text-transform: none;
+                    font-weight: 900;
+                    // text-transform: none;
+                    padding-right: .25rem;
+                    word-spacing: normal;
                 }
             }
         }

@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <>
             <div className={classes['button-container']}>
-                <span className={classes.subtitle}>Looking for an engineer who ships?</span>
+                <span className={classes.subtitle}>Looking for a developer?</span>
                 <a href='https://www.linkedin.com/in/oleksiireznichenko' target='_blank' className={classes['big-link']}>
                     <strong>Get in touch</strong>
                     <img src="/static/svg/arrowAngle.svg" alt="" className={classes.arrow} />
@@ -22,10 +22,10 @@ export default function Footer() {
                                     <span className={classes.subtitle}>Contact me</span>
                                 </li>
                                 <li className={classes.item}>
-                                    <a href='https://t.me/aleksys228' target='_blank' className={classes.link}>Telegram</a>
+                                    <a href='https://www.linkedin.com/in/oleksiireznichenko' target='_blank' className={classes.link}>LinkedIn</a>
                                 </li>
                                 <li className={classes.item}>
-                                    <a href='https://www.linkedin.com/in/oleksiireznichenko' target='_blank' className={classes.link}>LinkedIn</a>
+                                    <a href='https://github.com/OleksiiReznichenko' target='_blank' className={classes.link}>GitHub</a>
                                 </li>
                             </ul>
                             <ul className={`${classes.list} ${classes['list-2']}`}>
@@ -36,7 +36,7 @@ export default function Footer() {
                                     <a href='mailto:oleksiireznichenko228@gmail.com' className={classes.link}>Email</a>
                                 </li>
                                 <li className={classes.item}>
-                                    <a href='https://github.com/AlexeyReznichenko' target='_blank' className={classes.link}>GitHub</a>
+                                    <a href='https://t.me/aleksys228' target='_blank' className={classes.link}>Telegram</a>
                                 </li>
                             </ul>
                             <ul className={`${classes.list} desktop`}>

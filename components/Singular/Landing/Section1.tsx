@@ -50,13 +50,16 @@ export default function Section1() {
                             {/* <span className={classes.white}> neer </span>  */}
                         </h1>
                         <p className={`${classes.description} mobile`}>
-                            Passionate front-end developer with 3 years of experience, dedicated to crafting 
-                            websites that prioritize speed and user-friendliness.
+                            Software developer with experience from 15+ client projects, mainly using 
+                            TypeScript, Vue and React. Currently studying at OsloMet and expanding into 
+                            backend development.
                         </p>
                     </div>
                     <p className={`${classes.description} desktop`}>
-                        Software engineer with 3+ years of frontend experience (React, Next.js, TypeScript). 
-                        Currently studying BSc IT at OsloMet — expanding into backend, cloud, and full-stack systems.
+                        Software developer with experience from 15+ client projects, mainly using 
+                        TypeScript, Vue and React. I've worked on everything from interactive websites to 
+                        complex applications with API integrations. Currently studying at OsloMet and expanding 
+                        into backend development and cloud.
                     </p>
                 </div>
             </div>

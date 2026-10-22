@@ -2,155 +2,7 @@ import ButtonProject from '@/components/Reusable/Landing/ButtonProject';
 import ProjectComp from '@/components/Reusable/Landing/Project';
 import classes from '@/styles/componentsStyles/Landing/section4.module.scss';
 import Project from '@/types/project';
-
-const PROJECTS: Project[] = [
-    {
-        id: `tonmainers`,
-        name: `Ton Mainers`,
-        cover: `tonmainers`,
-        link: `https://project-bitmainers.vercel.app`,
-        description: `TonMiners is a groundbreaking NFT game on the TON Blockchain, offering a captivating 
-        pixelated universe where players can engage in mining activities.`,
-        technologies: `NEXT - TypeScript - Scss`,
-        staff: `2 Designers - 1 Frontend dev`,
-        timeSpent: `2 months`
-    },
-    {
-        id: `quicksms`,
-        name: `Quick SMS`,
-        cover: `sms`,
-        link: `https://quicksms.io`,
-        description: `QuickSMS.io revolutionizes SMS marketing with its non-VOIP number rental system, 
-        providing a secure gateway to SMS campaigns, bulk messaging, and message marketing.`,
-        technologies: `VUE - TypeScript - Scss`,
-        staff: `2 Designers - 2 Frontend devs`,
-        timeSpent: `1 month`
-    },
-    {
-        id: `dotabattlepass`,
-        name: `Dota Battle`,
-        cover: `dotaBattlepass`,
-        link: `https://project-dota-battlepass.vercel.app`,
-        description: `Experience the thrill of Dota Battlepass: where strategic gameplay meets the excitement 
-        of a casino mini-game. Dive into the world of Dota 2 like never before!`,
-        technologies: `VUE - TypeScript - Scss`,
-        staff: `1 Designer - 1 Frontend dev`,
-        timeSpent: `1 month`
-    },
-    // {
-    //     id: `earnfm`,
-    //     name: `Earn FM`,
-    //     cover: `earnFm`,
-    //     link: `https://release-musicearnfm.heavens.pro`,
-    //     description: `Switch to Earn.FM for the easiest way to earn passive income effortlessly. Simply turn it on, 
-    //     download the app, and let your internet connection pay for itself.`,
-    //     technologies: `VUE - TypeScript - Scss`,
-    //     staff: `1 Designer - 2 Frontend devs`,
-    //     timeSpent: `3 weeks`
-    // },
-    {
-        id: `invicta`,
-        name: `Invicta`,
-        cover: `invicta`,
-        link: `https://release-invictamarket.heavens.pro`,
-        description: `Explore Invicta, your go-to store system that sells gift cards from lots of brands. 
-        Navigate a visually stunning website featuring abstract figures and 3D card models.`,
-        technologies: `NUXT - TypeScript - Scss`,
-        staff: `1 Designer - 1 Frontend dev`,
-        timeSpent: `3 month`
-    },
-    {
-        id: `kerma`,
-        name: `Kerma`,
-        cover: `kerma`,
-        link: `https://kerma.netlify.app`,
-        description: `Dive into Kerma, a fun crypto (ETH) game where the biggest bet takes the prize. The 
-        website's pink design and a cute 3D winged cat make the game lively.`,
-        technologies: `NUXT - TypeScript - Scss`,
-        staff: `2 Designers - 1 Frontend dev`,
-        timeSpent: `1 month`
-    },
-    {
-        id: `earngames`,
-        name: `Earn Games`,
-        cover: `earngames`,
-        // link: `https://release-emiratesgames.heavens.pro`,
-        link: `https://earngames.pages.dev`,
-        description: `Check out Earn Games, our marketplace for special NFTs and our Academy, where we teach 
-        young folks to be digital experts in blockchain and Web 3.0.`,
-        technologies: `VUE - TypeScript - Scss`,
-        staff: `2 Designers - 3 Frontend devs`,
-        timeSpent: `2 months`
-    },
-    {
-        id: `nuef`,
-        name: `Nuef`,
-        cover: `nuef`,
-        // link: `https://release-nuefmusic.heavens.pro`,
-        link: `https://nuef.pages.dev`,
-        description: `Welcome to Nuef, the portfolio website for a musical studio that elevates brands to fame. 
-        At Nuef, it's not just about money, we seek believers in their musical projects.`,
-        technologies: `HTML - JavaScript - Scss`,
-        staff: `1 Designer - 1 Frontend dev`,
-        timeSpent: `3 weeks`
-    },
-    {
-        id: `metasnipers`,
-        name: `Meta Snipers`,
-        cover: `metasnipers`,
-        // link: `https://release-metasnipers.heavens.pro`,
-        link: `https://metasnipers.pages.dev`,
-        description: `MetaSnipers stands at the forefront of NFT innovation, offering a unique platform that 
-        predicts trends in the dynamic world of digital art and collectibles.`,
-        technologies: `VUE - TypeScript - Scss`,
-        staff: `1 Designer - 1 Frontend dev`,
-        timeSpent: `2 weeks`
-    },
-    {
-        id: `digiproxy2`,
-        name: `Digi Proxy 2`,
-        cover: `proxyCatGirl`,
-        link: `https://digiproxy.cc/en`,
-        description: `Digi Proxy is your ultimate solution for reliable and secure Residential, Datacenter, and 
-        Sneaker proxies. Constantly innovating for the best internet experience.`,
-        technologies: `NEXT - TypeScript - Scss`,
-        staff: `2 Designers - 4 Frontend devs`,
-        timeSpent: `1 month`
-    },
-    {
-        id: `digiproxy`,
-        name: `Digi Proxy`,
-        cover: `digiProxy`,
-        link: `https://digiproxy.pages.dev`,
-        description: `Experience the pinnacle of proxy services with Digi Proxy – your source for the fastest and 
-        most affordable residential proxies.`,
-        technologies: `HTML - JavaScript - Scss`,
-        staff: `1 Designer - 1 Frontend dev`,
-        timeSpent: `1 month`
-    },
-    {
-        id: `heavenspro`,
-        name: `Heavens Pro`,
-        cover: `heavensPro`,
-        link: `https://heavens.pro`,
-        description: `Developing unique IT business solutions since 2020. Symphony of design, tech prowess, 
-        and impeccable quality.`,
-        technologies: `NEXT - TypeScript - Scss`,
-        staff: `2 Designers - 2 Frontend devs`,
-        timeSpent: `2 months`
-    },
-    {
-        id: `mikhailwoodo`,
-        name: `Mikhail Woodo`,
-        cover: `mikhailPortfolio`,
-        link: `https://woodo.pages.dev`,
-        description: `Explore the portfolio of Mikhail, a skilled web and UI/UX designer, showcasing a collection of 
-        successful projects and stunning designs.`,
-        technologies: `HTML - JavaScript - Scss`,
-        staff: `1 Designer - 1 Frontend dev`,
-        timeSpent: `2 weeks`
-    },
-];
+import { PROJECTS } from '@/data/projects';
 
 export default function Section4() {
 
@@ -196,6 +48,8 @@ export default function Section4() {
                                 return (
                                     <ButtonProject 
                                         key={el.id + 'button'}
+                                        projectId={el.id}
+                                        projectName={el.name}
                                         index={index}
                                         projectsAmount={arr.length}
                                     />

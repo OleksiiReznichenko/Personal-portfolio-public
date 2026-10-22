@@ -8,20 +8,46 @@ import { ReduxProvider } from "@/store/provider";
 import { Metadata } from "next";
 import AnimationWrapper from "@/components/Reusable/App/AnimationWrapper";
 
-const titleDefault = "Oleksii Reznichenko — Software Engineer";
-const titleTemplate = "%s — Oleksii Reznichenko";
-const description = `Software engineer with strong frontend experience (React, Next.js, TypeScript) expanding 
-into full-stack and cloud. Currently studying BSc IT at OsloMet in Oslo. 15+ shipped projects with focus 
-on performance, accessibility, and reliable delivery. Available for internships and student developer roles.`;
+const titleDefault = "Oleksii Reznichenko | Software Engineer";
+const titleTemplate = "%s - Oleksii Reznichenko";
+
+const description = `Software developer with experience from 15+ client projects using TypeScript, 
+React and Vue. Explore my web applications, API integrations and frontend work.`;
+const descriptionOpenGraph = `Explore my software development projects, from interactive websites to 
+complex web applications with business logic, data management and backend API integrations.`;
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://oleksiireznichenko.com"),
+
   title: {
     default: titleDefault,
     template: titleTemplate,
   },
+
   description: description,
-  keywords: `software engineer, frontend engineer, full-stack developer, TypeScript, React, Next.js, Node.js, 
-  REST APIs, GraphQL, Java, SQL, web performance, accessibility, Oslo, Norway, OsloMet, BSc IT, internship, student developer`,
+
+  keywords: [
+    "Oleksii Reznichenko",
+    "software engineer",
+    "software developer",
+    "frontend developer",
+    "TypeScript",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Vue",
+    "Nuxt",
+    "Java",
+    "REST APIs",
+    "OsloMet",
+    "Oslo",
+    "Norway",
+  ],
+
+  alternates: {
+    canonical: "/",
+  },
+
   icons: {
     icon: {
       type: "image/png",
@@ -29,24 +55,34 @@ export const metadata: Metadata = {
       url: "/faviconBlack.png",
     },
   },
+  
   openGraph: {
     type: "website",
     url: "https://oleksiireznichenko.com",
-    images: "/seoImage.png",
-    title: {
-      default: titleDefault,
-      template: titleTemplate,
-    },
-    description: description,
+    siteName: "Oleksii Reznichenko",
+    locale: "en_US",
+    title: "Oleksii Reznichenko - Software Engineer",
+    description: descriptionOpenGraph,
+    images: [
+      {
+        url: "/seoImage.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Oleksii Reznichenko - Software Engineer",
+      },
+    ],
   },
+  
   twitter: {
     card: "summary_large_image",
-    images: "/seoImage.png",
-    title: {
-      default: titleDefault,
-      template: titleTemplate,
-    },
+    title: titleDefault,
     description: description,
+    images: [
+      {
+        url: "/seoImage.jpg",
+        alt: "Oleksii Reznichenko - Software Engineer",
+      },
+    ],
   },
 };
 

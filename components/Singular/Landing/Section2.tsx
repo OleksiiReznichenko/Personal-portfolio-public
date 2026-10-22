@@ -14,19 +14,20 @@ export default function Section2() {
                         <div className={`${classes['info-block']} ${classes['info-block-1']}`}>
                             <strong className={classes.subtitle}>Frontend Engineering</strong>
                             <p className={classes.description}>
-                                Production frontend in TypeScript, React, and Next.js — built across 15+ shipped 
-                                projects with focus on performance, accessibility, and reliable delivery. 
-                                Comfortable across the full Next.js ecosystem (App Router, SSR/ISR), 
-                                API integrations (REST/GraphQL), and modern testing (Playwright, Vitest).
+                                Most of my professional experience is with JavaScript, TypeScript, Vue, Nuxt, 
+                                React and Next.js. I've developed responsive websites, admin panels and 
+                                applications with shared state, user management and REST API integrations. 
+                                I enjoy working on the more complex functionality behind an interface, not just 
+                                the visual side.
                             </p>
                         </div>
                         <div className={`${classes['info-block']} ${classes['info-block-2']}`}>
-                            <strong className={classes.subtitle}>Full-stack & cloud</strong>
+                            <strong className={classes.subtitle}>Backend Development</strong>
                             <p className={classes.description}>
-                                Currently expanding from frontend into backend and cloud through BSc IT studies 
-                                at OsloMet. Working with Java, Python, SQL, and database design in coursework — 
-                                building toward a full-stack profile with C#/.NET, PostgreSQL, and Azure 
-                                as next focus areas.
+                                At OsloMet, I've been working with Java, Python, SQL and databases. I've also 
+                                built REST APIs with FastAPI, written automated tests and worked with Docker. 
+                                I'm currently developing a stronger understanding of backend systems, software 
+                                architecture and how applications work beyond the frontend.
                             </p>
                         </div>
                     </div>

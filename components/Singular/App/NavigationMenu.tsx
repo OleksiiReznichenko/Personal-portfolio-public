@@ -59,15 +59,7 @@ export default function NavigationMenu({ scrollToSection }: Props) {
                     </li>
                     <li className={classes.item}>
                         <a 
-                         href='https://drive.google.com/file/d/1OJDs93w96dsI8X93t2Eioiqw5zZTR-uL/view?usp=sharing' 
-                         target='_blank' 
-                         className={classes.link}>
-                            CV | Resume
-                        </a>
-                    </li>
-                    <li className={classes.item}>
-                        <a 
-                         href='https://github.com/AlexeyReznichenko' 
+                         href='https://github.com/OleksiiReznichenko' 
                          target='_blank' 
                          className={classes.link}>
                             GitHub
@@ -90,7 +82,7 @@ export default function NavigationMenu({ scrollToSection }: Props) {
                         <span className={classes.subtitle}>Best animations</span>
                     </li>
                     <li className={classes.item}>
-                        <button onClick={() => scrollToSection('portfolio')} className={classes.link}>TonMainers</button>
+                        <button onClick={() => scrollToSection('tonmainers')} className={classes.link}>TonMainers</button>
                     </li>
                     <li className={classes.item}>
                         <button onClick={() => scrollToSection('earngames')} className={classes.link}>EarnGames</button>

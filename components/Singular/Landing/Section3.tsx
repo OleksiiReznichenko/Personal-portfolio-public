@@ -16,15 +16,15 @@ export default function Section3() {
                 </div>
                 <div className={classes.info}>
                     <strong className={classes['big-description']}>
-                        Delivering Results
+                        Beyond the Interface
                     </strong>
                     <p className={classes.description}>
-                        15+ shipped projects across SaaS dashboards, e-commerce, and marketing sites — owning 
-                        the frontend in TypeScript, React, and Next.js. The work behind the visuals: measurable 
-                        performance gains (40% faster page loads via code-splitting and caching), accessibility 
-                        compliance (WCAG, semantic HTML, ARIA), and reliable delivery through testing and CI/CD 
-                        pipelines. Now expanding the same engineering mindset into backend, databases, and cloud 
-                        through BSc IT studies at OsloMet.
+                        Working on client projects taught me a lot beyond programming. I've worked directly with 
+                        clients, designers and developers, dealing with deadlines, changing requirements and 
+                        technical challenges. On some projects I handled the frontend independently, while on 
+                        others I worked in teams and helped coordinate development. These experiences taught me 
+                        to take responsibility, solve problems independently and communicate effectively with 
+                        others.
                     </p>
                 </div>
             </div>

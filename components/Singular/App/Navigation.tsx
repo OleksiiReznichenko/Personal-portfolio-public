@@ -97,7 +97,7 @@ export default function Navigation({ scrollToSection }: Props) {
                         </li>
                         <li className={classes.item}>
                             <a 
-                             href='https://github.com/AlexeyReznichenko' 
+                             href='https://github.com/OleksiiReznichenko' 
                              target='_blank' 
                              className={classes.link}>
                                 GitHub
@@ -146,7 +146,7 @@ export default function Navigation({ scrollToSection }: Props) {
                      onClick={() => handleCloseDropdown(setIsActiveDropdown4)}
                      className={classes.list}>
                         <li className={classes.item}>
-                            <button onClick={() => scrollToSection('portfolio')} className={classes.link}>TonMainers</button>
+                            <button onClick={() => scrollToSection('tonmainers')} className={classes.link}>TonMainers</button>
                         </li>
                         <li className={classes.item}>
                             <button onClick={() => scrollToSection('earngames')} className={classes.link}>EarnGames</button>

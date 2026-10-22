@@ -21,6 +21,7 @@ import Section1 from '@/components/Singular/Landing/Section1';
 import Section2 from '@/components/Singular/Landing/Section2';
 import Section3 from '@/components/Singular/Landing/Section3';
 import Section4 from '@/components/Singular/Landing/Section4';
+import { PROJECTS } from '@/data/projects';
 import { Metadata } from 'next';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -104,12 +105,13 @@ export default function Home() {
         const VW = WINDOW_WIDTH / 100;
         const VH = WINDOW_HEIGHT / 100;
 
-        // TIMELINE END
-        let scrollTimelineEnd = 'top -1100%';
-
-        if (window.outerWidth < 850 || isTouchDevice()) {
-            scrollTimelineEnd = 'top -9000px';
-        }
+        // Scale the pinned scroll distance with the number of projects.
+        // The original animation was tuned for 12 projects.
+        const projectCountChange = PROJECTS.length - 12;
+        const isMobileAnimation = WINDOW_WIDTH <= 850;
+        const scrollTimelineEnd = isMobileAnimation || isTouchDevice()
+            ? `top -${8250 + projectCountChange * 530}px`
+            : `top -${1008 + projectCountChange * 54}%`;
 
         let scrollTimelineTrigger = `.animation-block`;
 
@@ -332,6 +334,16 @@ export default function Home() {
                 .to(`.${classesButtonProject['button-project']}`, {duration: 1, stagger: 1.15, delay: .15, height: 6, backgroundColor: '#D9D9D9', width: '100%', ease: Power0.easeIn}, 'section-4-animation-=1.2')
 
             }
+
+            // These labels are used by the project buttons and header navigation.
+            // Their positions follow the real GSAP timeline rather than old pixel offsets.
+            const projectStart = timeline.labels['section-4-animation'];
+            const projectStep = WINDOW_WIDTH > 850 ? 1.2 : 1.15;
+
+            PROJECTS.forEach((project, index) => {
+                const settleTime = projectStart + index * projectStep + (index === 0 ? 0 : 0.05);
+                timeline.addLabel(`project-${project.id}`, settleTime);
+            });
         });
     };
 

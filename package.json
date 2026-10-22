@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
+    "framer-motion": "^10.18.0",
     "gsap": "^3.12.4",
     "next": "14.0.4",
     "next-redux-wrapper": "^8.1.0",

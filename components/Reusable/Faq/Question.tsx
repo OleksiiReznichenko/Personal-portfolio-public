@@ -17,7 +17,6 @@ export default function Question({ question, answer, answerListSkills, answerLis
                 <img src="/static/svg/arrowFaq.svg" alt="" className={`${classes.arrow} arrow`} />
             </div>
             <div className={`${classes['toggle-container']} toggle-container`}>
-                {answer && <p className={classes.answer}>{answer}</p>}
                 {answerListSkills && answerListSkillsType && <div className={`${classes.answer} ${classes['flex-container']}`}>
                     {answerListSkillsType && <ul className={`${classes.list} ${classes.skills}`}>
                         {answerListSkillsType.map((type, index) => {
@@ -27,7 +26,8 @@ export default function Question({ question, answer, answerListSkills, answerLis
                                     <li 
                                      key={index + 'skills'}
                                      className={classes.item}>
-                                        ✅ <span className={classes.type}>{type}{skills ? ':' : ''} </span> 
+                                        {/* ✅  */}
+                                        <span className={classes.type}>{type}{skills ? ':' : ''} </span> 
                                         {skills} 
                                     </li>
                                 )
@@ -46,6 +46,7 @@ export default function Question({ question, answer, answerListSkills, answerLis
                         })}
                     </ul>} */}
                 </div>}
+                {answer && <p className={classes.answer}>{answer}</p>}
             </div>
         </div>
     )

@@ -1,4 +1,3 @@
-import { isTouchDevice } from '@/store';
 import { baseActions, selectIsNavigationLinkAboutClicked, selectIsNavigationLinkEarngamesClicked, selectIsNavigationLinkInvictaClicked, selectIsNavigationLinkPortfolioClicked, selectIsNavigationLinkQuickSmsClicked, selectIsNavigationLinkTonmainersClicked, selectIsPreloaderFinished, selectMobileNavOpenedIndicator } from '@/store/baseSlice';
 import classes from '@/styles/componentsStyles/App/header.module.scss';
 import Link from 'next/link';
@@ -7,6 +6,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import NavigationMenu from './NavigationMenu';
 import Navigation from './Navigation';
+import { scrollToPortfolioTarget } from '@/utils/portfolioScroll';
 
 export default function Header() {
     const dispatch = useDispatch();
@@ -43,87 +43,10 @@ export default function Header() {
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // SCROLL TO THE NEEDED SECTION FUNCTIONS
     const scrollToSection = (type: string): void => {
-        const pinSpacer = document.querySelector(`.pin-spacer`) as HTMLDivElement;
         dispatch(baseActions.closeMobileNavOpenedIndicator());
 
         if (pathname === '/') {
-            if (!pinSpacer) return;
-
-            if (window.innerWidth < 850) {
-                const PROJECT_BASE_VALUE = 3160;
-                const PROJECT_SCROLL_VALUE = 535;
-
-                switch (type) {
-                    case 'portfolio':
-                        scrollTo(0, PROJECT_BASE_VALUE);
-                        break;
-                    case 'about':
-                        scrollTo(0, 560);
-                        break;
-                    case 'sms':
-                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 1));
-                        break;
-                    case 'invicta':
-                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 3));
-                        break;
-                    case 'earngames':
-                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 5));
-                        break;
-                }
-
-                return;
-            }
-
-            if (window.innerWidth > 850 && isTouchDevice()) {
-                const PROJECT_BASE_VALUE = 3220;
-                const PROJECT_SCROLL_VALUE = 530;
-
-                switch (type) {
-                    case 'portfolio':
-                        scrollTo(0, PROJECT_BASE_VALUE);
-                        break;
-                    case 'about':
-                        scrollTo(0, 540);
-                        break;
-                    case 'sms':
-                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 1));
-                        break;
-                    case 'invicta':
-                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 3));
-                        break;
-                    case 'earngames':
-                        scrollTo(0, PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 5));
-                        break;
-                }
-
-                return;
-            }
-
-            if (window.innerWidth > 850 && !isTouchDevice()) {
-                const PROJECT_BASE_VALUE = .327;
-                const PROJECT_SCROLL_VALUE = .0535;
-                const PIN_SPACER_HEIGHT = pinSpacer.clientHeight;
-
-                switch (type) {
-                    case 'portfolio':
-                        scrollTo(0, PIN_SPACER_HEIGHT * PROJECT_BASE_VALUE);
-                        break;
-                    case 'about':
-                        scrollTo(0, PIN_SPACER_HEIGHT * .0545);
-                        break;
-                    case 'sms':
-                        scrollTo(0, PIN_SPACER_HEIGHT * (PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 1)));
-                        break;
-                    case 'invicta':
-                        scrollTo(0, PIN_SPACER_HEIGHT * (PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 3)));
-                        break;
-                    case 'earngames':
-                        scrollTo(0, PIN_SPACER_HEIGHT * (PROJECT_BASE_VALUE + (PROJECT_SCROLL_VALUE * 5)));
-                        break;
-                }
-
-                return;
-            }
+            scrollToPortfolioTarget(type);
         } else {
             let timeoutTime = 3000;
 
@@ -166,6 +89,11 @@ export default function Header() {
             if (isNavigationLinkEarngamesClicked) {
                 scrollToSection('earngames');
                 dispatch(baseActions.isNavigationLinkClicked({type: 'earngames', value: false}));
+            }
+
+            if (isNavigationLinkTonmainersClicked) {
+                scrollToSection('tonmainers');
+                dispatch(baseActions.isNavigationLinkClicked({type: 'tonmainers', value: false}));
             }
         }, 200);
     }, [isNavigationLinkPortfolioClicked, isNavigationLinkAboutClicked, 

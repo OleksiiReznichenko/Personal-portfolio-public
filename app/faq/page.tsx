@@ -14,70 +14,75 @@ interface Question {
     answerListSkillsType?: string[];
 }
 
+
 const QUESTIONS: Question[] = [
     {
         id: 1,
-        question: `What is your background as an engineer?`,
-        answer: `3+ years of professional frontend experience (Apr 2021 – Feb 2024) building 
-        production applications in React, Next.js, TypeScript, with 15+ shipped projects across 
-        SaaS dashboards, e-commerce, and marketing sites. Currently studying BSc IT at OsloMet 
-        (Aug 2025 – Jun 2028) and expanding into backend, databases, and cloud development.`
+        question: `How did you get into software development?`,
+        answer: `I started making websites when I was around 15. At first I was mostly just curious about 
+        how websites worked and wanted to try building things myself. Then in 2021 I started getting actual 
+        client projects, and what started as a hobby slowly became real work. I ended up working on quite 
+        a few different projects and with different developers, and later decided to study IT at OsloMet to 
+        learn more about software development beyond just web.`
     },
     {
         id: 2,
-        question: `What is your current technical stack?`,
+        question: `What technologies do you work with?`,
         answerListSkillsType: [
             'Languages',
             'Frontend',
-            'Backend / data (in progress)',
-            'Tooling',
-            'Testing',
-            'Engineering practices',
+            'Backend and data',
+            'Tools and testing'
         ],
         answerListSkills: [
-            'TypeScript, JavaScript (ES6+), Java, Python, SQL',
-            'React, Next.js, HTML5, CSS, Sass/SCSS, Tailwind CSS',
-            'Node.js, REST APIs, GraphQL, PostgreSQL, Java APIs',
-            'Git, Vite, Docker, CI/CD pipelines (GitHub Actions, Vercel)',
-            'Playwright, Vitest',
-            'Performance optimization, accessibility (WCAG), responsive design',
-            ''
+            'TypeScript, JavaScript, Java, Python, SQL',
+            'Vue, Nuxt, React, Next.js, HTML, CSS/SCSS',
+            'REST APIs, FastAPI, PostgreSQL, JSON',
+            'Git, Docker, Docker Compose, pytest'
         ],
+        answer: `I've worked the most with TypeScript, JavaScript and frontend frameworks, especially Vue 
+        and React. That's where most of my professional experience comes from. At university I've also been 
+        working more with Java, Python, databases and backend development, which I'm trying to get better at.`
     },
     {
         id: 3,
-        question: `What are you doing now?`,
-        answer: `Studying BSc IT at OsloMet in Oslo (Aug 2025 – Jun 2028), with current coursework 
-        in Java APIs, Python, Databases, and Web Programming. Strong grades in foundational programming 
-        (A in Programming, A in Web Development & Inclusive Design). Working part-time at ASKO alongside 
-        studies and building independent projects to deepen backend and cloud skills.`
+        question: `What kinds of projects have you worked on?`,
+        answer: `Quite a few different ones actually. Some were smaller websites and portfolios with lots of 
+        animations and interactive stuff, while others were more complicated applications with admin panels, 
+        user accounts and backend APIs. On some projects I handled the whole frontend myself, and on others 
+        I worked with other developers and designers. I've also had quite a bit of direct contact with clients, 
+        so I was often involved in discussing what they wanted and figuring out how to build it.`
     },
     {
         id: 4,
-        question: `What kind of role are you looking for?`,
-        answer: `Open to summer 2026 internships, part-time student developer roles in Oslo (or remote), 
-        and summer 2027 internships at Norwegian tech companies. Targeting full-stack and backend-leaning 
-        positions while staying open to strong frontend opportunities. Norwegian and English working 
-        proficiency, plus native Russian and Ukrainian.`
+        question: `Do you focus more on frontend or backend?`,
+        answer: `Definitely more frontend so far, since that's what I've been doing for the longest time. 
+        I've worked a lot with Vue, React and TypeScript, but lately I've been getting more interested in 
+        backend too. Especially how the different parts of an application work together, databases, APIs and 
+        things like that. I'd like to become a full-stack developer eventually, so right now I'm trying to get 
+        more experience with that side of development as well.`
     },
     {
         id: 5,
-        question: `How do you approach performance and accessibility?`,
-        answer: `Performance and accessibility are part of how I build, not afterthoughts. Across my client 
-        work, I drove measurable results: reduced page load times by up to 40% via code-splitting, image 
-        optimization, and caching strategies. I work to WCAG accessibility standards using semantic HTML, 
-        keyboard/ARIA support, and structured headings. Testing with Playwright and Vitest catches regressions 
-        before they ship.`
+        question: `What's a project you're particularly proud of?`,
+        answer: `Probably QuickSMS. I was the main frontend developer and worked on quite a big part of the 
+        application, especially the admin panel and the landing page. The admin panel had functionality for 
+        managing users, transactions, coupons, statistics and other stuff through backend APIs. I also worked 
+        with another frontend developer and helped coordinate some of his work. We had quite a tight deadline 
+        on that project, so there was a lot going on, but I learned quite a bit from it. It was also one of 
+        the projects where I had more responsibility than just building the frontend.`
     },
     {
         id: 6,
-        question: `What are you currently building or learning?`,
-        answer: `Studying for upcoming exams in Python, Web Programming, and Databases (June 2026). Building a 
-        flagship full-stack project this summer combining ASP.NET Core (C#), PostgreSQL, and Azure deployment 
-        with a Next.js frontend — extending my engineering range from frontend into backend and cloud. Long-term 
-        focus areas: .NET ecosystem, cloud-native development, and algorithmic depth.`
-    },
+        question: `What kind of opportunities are you looking for?`,
+        answer: `Right now I'm mainly looking for part-time developer jobs and summer internships in Oslo 
+        while I'm studying at OsloMet. I'd really like to get more experience with backend, full-stack and 
+        cloud development, since that's the direction I'm trying to move towards. But I'm also very open to 
+        frontend roles, especially if I get to work on more complicated applications and learn from other 
+        developers.`
+    }
 ];
+
 
 export default function Faq() {
 
